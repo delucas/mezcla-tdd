@@ -24,4 +24,14 @@ public class MezclaTests {
 		
 	}
 	
+	@Test
+	public void queElPrimerArregloPuedeEstarVacio() {
+		
+		int[] a = new int[]{}, b = new int[]{1};
+		int[] c = m.mezclar(a, b);
+		
+		assertArrayEquals("Primer arreglo vacío resulta en el segundo arreglo", new int[]{1}, c);
+		
+	}
+	
 }
