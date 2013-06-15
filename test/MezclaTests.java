@@ -1,30 +1,23 @@
 import static org.junit.Assert.*;
-import org.junit.Test;
 
+import org.junit.Before;
+import org.junit.Test;
 
 public class MezclaTests {
 
-	@Test
-	public void queSePuedeCrearUnMezclador() {
+	private Mezclador m;
+
+	@Before
+	public void setUp() {
 		
-		Mezclador m = new Mezclador();
-		
-	}
-	
-	@Test
-	public void queSePuedeMezclar() {
-		
-		Mezclador m = new Mezclador();
-		int[] a = null, b = null;
-		int[] c = m.mezclar(a, b);
+		m = new Mezclador();
 		
 	}
 	
 	@Test
 	public void queSePuedenMezclarArreglosVacios() {
 		
-		Mezclador m = new Mezclador();
-		int[] a = null, b = null;
+		int[] a = new int[]{}, b = new int[]{};
 		int[] c = m.mezclar(a, b);
 		
 		assertArrayEquals("Dos arreglos vacíos resultan en un arreglo vacío", new int[]{}, c);
