@@ -2,10 +2,11 @@
 public class Mezclador {
 
 	public int[] mezclar(int[] a, int[] b) {
+		int[] c = b;
 		if (b.length == 0) {
-			return a;
+			c = a;
 		}
-		return b;
+		return c;
 	}
 
 }
