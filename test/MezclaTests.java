@@ -10,4 +10,13 @@ public class MezclaTests {
 		
 	}
 	
+	@Test
+	public void queSePuedeMezclar() {
+		
+		Mezclador m = new Mezclador();
+		int[] a = null, b = null;
+		int[] c = m.mezclar(a, b);
+		
+	}
+	
 }
