@@ -1,3 +1,4 @@
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 
@@ -16,6 +17,17 @@ public class MezclaTests {
 		Mezclador m = new Mezclador();
 		int[] a = null, b = null;
 		int[] c = m.mezclar(a, b);
+		
+	}
+	
+	@Test
+	public void queSePuedenMezclarArreglosVacios() {
+		
+		Mezclador m = new Mezclador();
+		int[] a = null, b = null;
+		int[] c = m.mezclar(a, b);
+		
+		assertArrayEquals("Dos arreglos vacíos resultan en un arreglo vacío", new int[]{}, c);
 		
 	}
 	
