@@ -17,7 +17,7 @@ public class Mezclador {
 			c[k++] = a[i++];
 		}
 		while (j < b.length) {
-			c[k] = b[j++];
+			c[k++] = b[j++];
 		}
 
 		return c;
