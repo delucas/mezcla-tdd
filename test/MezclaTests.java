@@ -73,5 +73,15 @@ public class MezclaTests {
 		assertArrayEquals("Al unir dos arreglos resulta en un arreglo con todos los elementos intercalados", new int[]{1, 2, 3}, c);
 
 	}
+	
+	@Test
+	public void queSePuedenUnirDosArreglosGrandementeDesigualesConElementosIntercalados() {
+
+		int[] a = new int[]{1, 3, 5, 6}, b = new int[]{2};
+		int[] c = m.mezclar(a, b);
+
+		assertArrayEquals("Al unir dos arreglos resulta en un arreglo con todos los elementos intercalados", new int[]{1, 2, 3, 5, 6}, c);
+
+	}
 
 }
