@@ -13,18 +13,13 @@ public class Mezclador {
 			}
 
 		}
-		for (; i < a.length; i++) {
-			c[k] = a[i];
+		while (i < a.length) {
+			c[k] = a[i++];
 		}
-		for (; j < b.length; j++) {
-			c[k] = b[j];
+		while (j < b.length) {
+			c[k] = b[j++];
 		}
-		if (b.length == 0) {
-			c = a;
-		}
-		if (a.length == 0) {
-			c = b;
-		}
+
 		return c;
 	}
 
