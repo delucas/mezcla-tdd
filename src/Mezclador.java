@@ -1,16 +1,23 @@
-
 public class Mezclador {
 
 	public int[] mezclar(int[] a, int[] b) {
 		int[] c = new int[a.length + b.length];
-		if (a.length > 0 && b.length > 0) {
-			
-			for (int i = 0; i < a.length; i++) {
-				c[i] = a[i];
+
+		int i = 0, j = 0, k = 0;
+		while (i < a.length && j < b.length) {
+
+			if (a[i] < b[j]) {
+				c[k++] = a[i++];
+			} else {
+				c[k++] = b[j++];
 			}
-			for (int i = 0; i < b.length; i++) {
-				c[a.length + i] = b[i];
-			}
+
+		}
+		for (; i < a.length; i++) {
+			c[k] = a[i];
+		}
+		for (; j < b.length; j++) {
+			c[k] = b[j];
 		}
 		if (b.length == 0) {
 			c = a;
